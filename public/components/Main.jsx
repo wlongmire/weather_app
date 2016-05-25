@@ -1,14 +1,17 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-const Component = React.createClass({
+const Nav = require('Nav');
+
+const Main = React.createClass({
   render:function() {
     return(
       <div>
-        <h1>Welcome to React</h1>
+        <Nav />
+        {this.props.children}
       </div>
     );
   }
 });
 
-module.exports = Component;
+module.exports = Main;
