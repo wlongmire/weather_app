@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './public/app.jsx',
+  entry: './app/app.jsx',
 
   output: {
     path: __dirname,
@@ -9,18 +9,21 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
+      //api:
+      openWeatherMap: 'app/api/openWeatherMap.jsx',
+
       //main page components
-      Main: 'public/components/Main.jsx',
-      Nav: 'public/components/Nav.jsx',
+      Main: 'app/components/Main.jsx',
+      Nav: 'app/components/Nav.jsx',
 
       //subpages
-      Weather: 'public/components/pages/Weather.jsx',
-      About: 'public/components/pages/About.jsx',
-      Examples: 'public/components/pages/Examples.jsx',
+      Weather: 'app/components/pages/Weather.jsx',
+      About: 'app/components/pages/About.jsx',
+      Examples: 'app/components/pages/Examples.jsx',
 
       //weatherpage components
-      WeatherForm: 'public/components/WeatherForm.jsx',
-      WeatherMessage: 'public/components/WeatherMessage.jsx'
+      WeatherForm: 'app/components/WeatherForm.jsx',
+      WeatherMessage: 'app/components/WeatherMessage.jsx'
     },
 
     extensions: ['', '.js', '.jsx']
@@ -37,5 +40,7 @@ module.exports = {
           exclude: /(node_modules | bower_components)/
         }
     ]
-  }
+  },
+
+  devtool: 'cheap-module-eval-source-map'
 }
