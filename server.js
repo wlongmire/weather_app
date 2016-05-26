@@ -2,17 +2,13 @@ var express = require('express');
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-if (process.env.PORT) {
-
-  app.use(function (req, res, next) {
-    if (req.headers['x-forwarded-proto'] === 'http') {
-      next();
-    } else {
+app.use(function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] === 'https') {
       res.redirect('http://' + req.hostname + req.url);
+    } else {
+      next();
     }
   });
-
-}
 
 app.use(express.static('public'));
 
