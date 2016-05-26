@@ -16,6 +16,7 @@ const Weather = React.createClass({
     const that = this;
     that.setState({isLoading:true});
 
+    debugger;
     openWeatherMap.getTemp(location).then(function(temp) {
 
       that.setState({
