@@ -46,7 +46,7 @@ module.exports = {
       ErrorModal: 'app/components/modals/ErrorModal.jsx',
 
       //css
-      applicationStyles: 'app/styles/app.css'
+      applicationStyles: 'app/styles/app.scss'
     },
 
     extensions: ['', '.js', '.jsx']
