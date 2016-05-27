@@ -1,10 +1,16 @@
+const { Link } = require('react-router')
 const React = require('react');
 const ReactDOM = require('react-dom');
 
 const About = React.createClass({
   render:function() {
     return(
-      <h3>About Page</h3>
+      <div>
+        <h1 className="text-center">About Us</h1>
+        <div className="center">
+          <p>An example app allow us to get realtime from any city. Made with <Link to="http://openweathermap.org/">openWeatherMap.org</Link>. Code hosted on <Link to="https://github.com/wlongmire/weather_app">github</Link>.</p>
+        </div>
+      </div>
     );
   }
 });
