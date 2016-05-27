@@ -40,7 +40,10 @@ module.exports = {
 
       //weatherpage components
       WeatherForm: 'app/components/WeatherForm.jsx',
-      WeatherMessage: 'app/components/WeatherMessage.jsx'
+      WeatherMessage: 'app/components/WeatherMessage.jsx',
+
+      //modals
+      ErrorModal: 'app/components/modals/ErrorModal.jsx'
     },
 
     extensions: ['', '.js', '.jsx']

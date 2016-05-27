@@ -10,8 +10,8 @@ module.exports = {
 
     return (axios.get(requestUrl).then(function(res) {
 
-      if (res.data.COD && res.data.message) {
-        throw new Error(res.data.message);
+      if (location === "error" || (res.data.COD && res.data.message)) {
+        throw new Error("City Not Found.");
       } else {
         return res.data.main.temp;
       }
